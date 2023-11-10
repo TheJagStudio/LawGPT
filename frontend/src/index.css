@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.noScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.font-Times {
+    font-family: "Times New Roman", Times, serif !important;
+}
+.font-Arial {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.font-Calibri {
+    font-family: "Calibri", sans-serif !important;
+}
+.font-Inter {
+    font-family: "Inter", sans-serif !important;
+}
+.font-Poppins {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.size-Normal {
+    font-size: 12px;
+}
+.size-Title {
+    font-size: 36px;
+}
+.size-Subtitle {
+    font-size: 15px;
+    color: #666666;
+}
+.size-Heading-1 {
+    font-size: 20px;
+}
+.size-Heading-2 {
+    font-size: 16px;
+}
+.size-Heading-3 {
+    font-size: 14px;
+}
+
+.noScroll::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    @apply rounded-t-lg overflow-hidden text-center w-full drop-shadow-lg;
+}
+table td {
+    padding: 5px;
+    @apply border border-primary-500;
+}
+table th {
+    padding: 5px;
+    @apply border border-primary-500 bg-primary-500 text-white;
+}
+
+pre {
+    @apply bg-gray-200/50 p-5 rounded-lg !my-3 overflow-x-scroll noScroll;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    @apply bg-primary-100;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-primary-600;
+}
+
+/* custom input range */
+#sliderProgress {
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+#sliderProgress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 3px !important;
+    width: 20px;
+    height: 50px;
+    @apply bg-primary-600;
+    margin: 13.8px 0;
+}
+
+#google_translate_element span {
+    display: none !important;
+}
+.skiptranslate iframe {
+    display: none !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skeleton-animation {
+    animation: skeleton-loading 9s ease-in-out infinite;
+    transform-origin: left;
+    transform: scale(0, 1);
+}
+
+@keyframes skeleton-loading {
+    0% {
+        transform: scale(0, 1);
+    }
+    5.8% {
+        transform: scale(1, 1);
+    }
+    6% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.rainbow-animation {
+    animation: rainbow 500s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -10000%;
+    }
+}
+
+/****************************** MUIRichTextEditor Styling ******************************/
+
+@media print {
+    #docMain {
+        @apply w-full h-full p-0;
+    }
+    #mui-rte-toolbar {
+        @apply hidden;
+    }
+    #mui-rte-editor {
+        @apply block;
+        margin: 0 !important;
+        width: 100% !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    #mui-rte-container {
+        @apply !rounded-none;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+}
+
+#mui-rte-toolbar {
+    @apply bg-primary-50/75 rounded-full px-5 py-2 space-x-4;
+}
+#mui-rte-H2-button {
+    @apply text-black;
+}
+
+#mui-rte-inline-toolbar button {
+    @apply text-primary-400 hover:text-primary-600 hover:bg-primary-100 h-7 w-7 p-2 active:text-primary-600;
+}
+
+#mui-rte-toolbar button {
+    @apply text-primary-600/75 hover:text-primary-600 hover:bg-primary-100 h-7 w-7 p-2;
+}
+#mui-rte-toolbar button svg {
+    @apply h-5 w-5;
+}
+
+/* get second child of mui-rte-container */
+#mui-rte-container > *:nth-child(2):not(#mui-rte-editor):not(#mui-rte-toolbar) {
+    @apply rounded-lg p-14 my-5  w-[75%] h-auto aspect-[1/1.41] mx-[12.5%];
+}
+
+#mui-rte-editor {
+    @apply bg-white rounded-lg p-14 border border-slate-200 shadow-xl shadow-slate-300/25 my-5  w-[75%] h-auto aspect-[1/1.41] mx-auto;
+}
+
+/****************************************** Tiny Editor *****************************************/
+
+/* .tox-notification--warning {
+    display: none !important;
+}
+.tox-notification--error {
+    display: none !important;
+} */
+.tox-statusbar__branding {
+    display: none !important;
+}
+.tox-tinymce {
+    border: none !important;
+    border-radius: 0 !important;
+}
+.tox-edit-area__iframe::-webkit-scrollbar {
+    display: none !important;
+}
+.tox-collection__item--active {
+    @apply !bg-primary-200/50;
+}
+.tox-mbtn--active,
+.tox-tbtn--enabled {
+    @apply !bg-primary-400/50;
+}
+
+.tox-menubar {
+    @apply !pl-14 !pt-2;
+}
+
+.tox .tox-mbtn:focus:not(:disabled),
+.tox .tox-tree .tox-trbtn:focus,
+.tox .tox-split-button:focus,
+.tox .tox-number-input button:focus,
+.tox .tox-number-input input:focus,
+.tox .tox-tbtn:focus {
+    @apply !bg-primary-300;
+}
+
+.tox .tox-mbtn:hover:not(:disabled):not(.tox-mbtn--active),
+.tox .tox-tree .tox-trbtn:hover,
+.tox .tox-split-button:hover,
+.tox .tox-number-input button:hover,
+.tox .tox-number-input input:hover,
+.tox .tox-tbtn:hover {
+    @apply !bg-primary-200;
+}
+
+.tox .tox-tbtn:active {
+    background: #a6ccf7;
+    border: 0;
+    box-shadow: none;
+    color: #222f3e;
+}
+
+.tox .tox-button {
+    @apply !bg-primary-500 !text-primary-100 !border-purple-600;
+}
+
+.tox .tox-button:hover {
+    @apply !bg-primary-600 !text-primary-100 !border-purple-600;
+}
+
+.tox-textfield:blur,
+.tox-textfield {
+    @apply !border-none !text-primary-600;
+}
+.tox-textfield:focus {
+    @apply !outline-none !ring-2 !ring-primary-500/50 !border-transparent;
+}
